@@ -11,6 +11,9 @@ import okhttp3.*;
  */
 public class Main {
 
+    // TODO 替换成自己的API_KEY
+    private static final String API_KEY = "moss-jp5vpvrrcgliju1a10q078isme5rhed834rp6hc9q3dvak2e";
+
 
     public static void main(String[] args) throws Exception {
         JSONObject params = new JSONObject();
@@ -24,7 +27,7 @@ public class Main {
         Request request = new Request.Builder()
                 .url("http://api.aihao123.cn/moss/v1/completions")
                 .post(body)
-                .addHeader("Authorization", "moss-jp5vpvrrcgliju1a10q078isme5rhed834rp6hc9q3dvak2e")
+                .addHeader("Authorization", API_KEY)
                 .addHeader("content-type", "application/json")
                 .build();
 
